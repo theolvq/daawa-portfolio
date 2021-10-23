@@ -1,26 +1,23 @@
-:root {
-  --sky-blue-crayola: hsla(191, 99%, 68%, 1);
-  --electric-indigo: hsla(264, 84%, 51%, 1);
-  --midnight-blue: hsla(230, 97%, 24%, 1);
-  --hot-pink: hsla(330, 100%, 70%, 1);
-  --snow: hsla(330, 60%, 98%, 1);
-  --taupe-gray: hsla(262, 3%, 55%, 1);
-  --raisin-black: hsla(240, 21%, 12%, 1);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  h1 {
+    @apply text-7xl font-extrabold;
+  }
 
-* {
-  box-sizing: border-box;
+  h2 {
+    @apply text-6xl font-bold;
+  }
+
+  h3 {
+    @apply text-4xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-semibold;
+  }
 }
