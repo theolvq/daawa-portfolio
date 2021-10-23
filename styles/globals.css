@@ -1,3 +1,13 @@
+:root {
+  --sky-blue-crayola: hsla(191, 99%, 68%, 1);
+  --electric-indigo: hsla(264, 84%, 51%, 1);
+  --midnight-blue: hsla(230, 97%, 24%, 1);
+  --hot-pink: hsla(330, 100%, 70%, 1);
+  --snow: hsla(330, 60%, 98%, 1);
+  --taupe-gray: hsla(262, 3%, 55%, 1);
+  --raisin-black: hsla(240, 21%, 12%, 1);
+}
+
 html,
 body {
   padding: 0;
