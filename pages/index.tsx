@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
@@ -12,14 +12,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <main className="min-h-screen">
+        <Hero />
+        <Home />
       </main>
     </div>
   );
