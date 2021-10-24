@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import HeroBackground from "../components/HeroBackground";
 import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
+import WhyMe from "../components/WhyMe";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +16,7 @@ const Home: NextPage = () => {
       <NavBar />
       <main className="min-h-screen">
         <Hero />
-        <Home />
+        <WhyMe />
       </main>
     </div>
   );

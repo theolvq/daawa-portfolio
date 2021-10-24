@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         cyan: "hsl(191, 99%, 68%)",
+        pink: "hsl(330, 100%, 70%)",
         purple: "hsl(264, 84%, 51%)",
         white: "hsl(330, 60%, 98%)",
         black: "hsl(240, 21%, 12%)",

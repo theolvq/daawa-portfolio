@@ -1,21 +1,29 @@
 import React from "react";
+import Image from "next/image";
+import profilePic from "../lib/images/profile-pic.jpg";
+import profilePicShadow from "../lib/images/profile-pic-shadow.png";
+import HeroBackground from "./HeroBackground";
 
-const Hero = () => {
+const Home: React.FC = () => {
   return (
-    <div className="absolute -z-10">
-      <svg
-        className="w-screen"
-        viewBox="0 0 1924 556"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M559.5 173L0 556V0H1924L1326.5 379L559.5 173Z"
-          fill="#181825"
-          stroke="black"
-        />
-      </svg>
-    </div>
+    <>
+      <HeroBackground />
+      <section className="max-w-6xl min-h-screen mx-auto py-32">
+        <div className="flex justify-between items-end">
+          <div>
+            <h1 className=" bg-gradient-to-br from-black to-cyan via-purple text-transparent bg-clip-text">
+              Hi&#39;m Théo!
+              <br /> Front-End Developer
+            </h1>
+          </div>
+          <div className="relative ">
+            <Image src={profilePic} alt={`Theo Leveque's Portrait`}></Image>
+            <div className="background-image" />
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default Hero;
+export default Home;
