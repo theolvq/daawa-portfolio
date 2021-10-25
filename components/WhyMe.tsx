@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useRef, WheelEventHandler } from "react";
+import TechList from "./TechList";
 import WhyMeList from "./WhyMeList";
 
-const WhyMe = () => {
+interface WhyMeProps {
+  handleScroll: WheelEventHandler<HTMLElement>;
+}
+
+const WhyMe: React.FC<WhyMeProps> = ({ handleScroll }) => {
   return (
-    <section>
-      <div className="bg-black text-white text-center h-2/3 py-16">
+    <section onWheel={handleScroll} id="about">
+      <div className="bg-black text-white text-center py-16">
         <h2 className="uppercase py-16">Why Me?</h2>
         <WhyMeList />
-        <div>
-          <h3>The Tech I work with</h3>
-        </div>
+
+        <h3>The Tech I Work With</h3>
+      </div>
+      <div className="flex flex-col items-center">
+        <TechList />
       </div>
     </section>
   );

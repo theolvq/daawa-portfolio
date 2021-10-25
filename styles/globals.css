@@ -14,11 +14,19 @@
   }
 
   h3 {
-    @apply text-4xl font-semibold;
+    @apply text-4xl font-semibold mb-8;
   }
 
   h4 {
     @apply text-2xl font-semibold;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -34,10 +42,10 @@
   }
 
   .nav-items {
-    @apply py-1 hover:border-opacity-100 border-cyan border-b-8 border-opacity-0 transition-all duration-500;
+    @apply hover:border-opacity-100 transform hover:-translate-y-2 border-cyan border-b-4 border-opacity-0 transition-all duration-500;
   }
 
   .about-subtitle {
-    @apply text-cyan my-4;
+    @apply my-4;
   }
 }
