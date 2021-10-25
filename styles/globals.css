@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply sm:text-4xl lg:text-6xl  font-extrabold;
+    @apply text-4xl lg:text-6xl  font-extrabold;
   }
 
   h2 {

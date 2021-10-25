@@ -8,18 +8,18 @@ interface HeroProps {
   handleScroll: WheelEventHandler<HTMLElement>;
 }
 
-const Home: React.FC<HeroProps> = ({ handleScroll }) => {
+const Hero: React.FC<HeroProps> = ({ handleScroll }) => {
   return (
     <>
       <HeroBackground />
       <section
-        id="top"
+        id="hero"
         onWheel={handleScroll}
-        className="max-w-6xl min-h-screen mx-auto py-32"
+        className=" max-w-6xl min-h-screen mx-auto lg:py-32 py-8"
       >
-        <div className="flex justify-between items-end">
+        <div className="flex flex-col justify-between items-center gap-8 lg:flex-row lg:items-end">
           <div>
-            <h1 className=" bg-gradient-to-br from-black to-cyan via-purple text-transparent bg-clip-text">
+            <h1 className="bg-gradient-to-br from-black to-cyan via-purple text-transparent bg-clip-text">
               Hi&#39;m Théo!
               <br /> Front-End Developer
             </h1>
@@ -34,4 +34,4 @@ const Home: React.FC<HeroProps> = ({ handleScroll }) => {
   );
 };
 
-export default Home;
+export default Hero;

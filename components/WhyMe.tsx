@@ -8,7 +8,7 @@ interface WhyMeProps {
 
 const WhyMe: React.FC<WhyMeProps> = ({ handleScroll }) => {
   return (
-    <section onWheel={handleScroll} id="about">
+    <section onWheel={handleScroll} id="why-me">
       <div className="bg-black text-white text-center py-16">
         <h2 className="uppercase py-16">Why Me?</h2>
         <WhyMeList />

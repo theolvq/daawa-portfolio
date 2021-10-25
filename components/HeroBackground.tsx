@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroBackground = () => {
   return (
-    <div className="absolute top-0 left-0 -z-10">
+    <div className="absolute top-0 left-0 -z-10 hidden lg:block">
       <svg
         className="w-screen "
         viewBox="0 0 1924 556"
