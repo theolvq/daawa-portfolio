@@ -1,1 +1,5 @@
-export const hi = "hi";
+import { WheelEventHandler } from "react";
+
+export interface SectionProps {
+  handleScroll: WheelEventHandler<HTMLElement>;
+}

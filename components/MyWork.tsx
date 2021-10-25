@@ -1,9 +1,17 @@
 import React from "react";
+import { SectionProps } from "../types";
+import MyWorkCard from "./MyWorkCard";
 
-const MyWork = () => {
+const MyWork: React.FC<SectionProps> = ({ handleScroll }) => {
   return (
-    <section>
-      <h2>My Work</h2>
+    <section id="my-work" onWheel={handleScroll} className="max-w-6xl mx-auto">
+      <h2 className="uppercase py-16 text-center">My Work</h2>
+      <div>
+        <MyWorkCard />
+        <MyWorkCard />
+        <MyWorkCard />
+        <MyWorkCard />
+      </div>
     </section>
   );
 };

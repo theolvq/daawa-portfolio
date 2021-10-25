@@ -20,7 +20,14 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      gridColumnStart: ["even"],
+      gridColumnEnd: ["even"],
+      gridRowStart: ["even"],
+      gridRowEnd: ["even"],
+      order: ["even"],
+      flexDirection: ["even"],
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

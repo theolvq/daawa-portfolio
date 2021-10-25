@@ -3,12 +3,9 @@ import Image from "next/image";
 import profilePic from "../lib/images/profile-pic.jpg";
 import profilePicShadow from "../lib/images/profile-pic-shadow.png";
 import HeroBackground from "./HeroBackground";
+import { SectionProps } from "../types";
 
-interface HeroProps {
-  handleScroll: WheelEventHandler<HTMLElement>;
-}
-
-const Hero: React.FC<HeroProps> = ({ handleScroll }) => {
+const Hero: React.FC<SectionProps> = ({ handleScroll }) => {
   return (
     <>
       <HeroBackground />
