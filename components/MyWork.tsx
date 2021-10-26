@@ -4,9 +4,9 @@ import MyWorkCard from "./MyWorkCard";
 
 const MyWork: React.FC<SectionProps> = ({ handleScroll }) => {
   return (
-    <section id="my-work" onWheel={handleScroll} className="max-w-6xl mx-auto">
+    <section id="my-work" onWheel={handleScroll} className="max-w-6xl mx-auto ">
       <h2 className="uppercase py-16 text-center">My Work</h2>
-      <div>
+      <div className="space-y-8">
         <MyWorkCard />
         <MyWorkCard />
         <MyWorkCard />

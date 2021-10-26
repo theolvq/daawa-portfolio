@@ -4,7 +4,7 @@ import { logos } from "../lib/logos";
 
 const TechList = () => {
   return (
-    <div className="relative bottom-32 sm:bottom-20 lg:bottom-12 py-6 px-12 mx-4 flex flex-wrap justify-center gap-4 bg-white max-w-6xl rounded-2xl shadow-lg">
+    <div className="relative bottom-32 sm:bottom-20 lg:bottom-12 py-6 px-12 mx-4 flex flex-wrap justify-center gap-4 bg-white-trans backdrop-filter backdrop-blur-md max-w-6xl rounded-2xl shadow-lg">
       {logos.map((logo) => (
         <div
           key={logo.id}

@@ -3,7 +3,7 @@ import React from "react";
 const WhyMeList = () => {
   return (
     <div className="mb-32 max-w-6xl sm:mx-auto ">
-      <ul className="flex flex-col lg:flex-row justify-evenly gap-16">
+      <ul className="flex flex-col lg:flex-row justify-evenly gap-16 text-gray-300">
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"

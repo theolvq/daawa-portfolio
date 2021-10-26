@@ -6,11 +6,11 @@
 
 @layer base {
   h1 {
-    @apply text-4xl lg:text-6xl  font-extrabold;
+    @apply text-4xl  md:text-6xl lg:text-7xl  font-extrabold;
   }
 
   h2 {
-    @apply text-6xl font-bold;
+    @apply text-6xl font-extrabold text-black uppercase text-center py-16;
   }
 
   h3 {
@@ -22,11 +22,24 @@
   }
 
   body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden bg-white text-gray-500;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+  [type="text"],
+  [type="email"],
+  textarea {
+    @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
+    focus:border-gray-500  focus:ring-gray-500  
+    shadow-sm placeholder-transparent;
+  }
+
+  label {
+    @apply font-normal absolute left-2 -top-4 text-white text-xs rounded-full py-1 px-2 bg-purple
+    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
+    transition-all peer-focus:-top-4 peer-focus:text-white peer-focus:text-xs peer-focus:bg-purple;
   }
 }
 
@@ -42,10 +55,10 @@
   }
 
   .nav-items {
-    @apply hover:border-opacity-100 transform hover:-translate-y-2 border-cyan border-b-4 border-opacity-0 transition-all duration-500;
+    @apply hover:border-opacity-100 transform border-cyan border-b-4 border-opacity-0 transition-all duration-500;
   }
 
   .about-subtitle {
-    @apply my-4;
+    @apply my-4 tracking-wider text-white;
   }
 }

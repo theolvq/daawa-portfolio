@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -11,6 +12,7 @@ module.exports = {
         pink: "hsl(330, 100%, 70%)",
         purple: "hsl(264, 84%, 51%)",
         white: "hsl(330, 60%, 98%)",
+        "white-trans": "hsla(330, 60%, 98%, 0.75)",
         black: "hsl(240, 21%, 12%)",
       },
     },
@@ -21,13 +23,11 @@ module.exports = {
   },
   variants: {
     extend: {
-      gridColumnStart: ["even"],
-      gridColumnEnd: ["even"],
-      gridRowStart: ["even"],
-      gridRowEnd: ["even"],
-      order: ["even"],
       flexDirection: ["even"],
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    // require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/forms"),
+  ],
 };

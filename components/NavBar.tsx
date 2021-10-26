@@ -6,6 +6,9 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
   const [showNav, setShowNav] = useState(false);
+
+  const scrollClass = "translate-y-2 text-cyan font-bold";
+
   return (
     <header className="sticky z-50 top-0 left-0  bg-black text-white h-16">
       <div className="flex items-center justify-between h-full max-w-6xl mx-auto px-4">
@@ -15,29 +18,27 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
         <nav className="mx-auto hidden lg:block">
           <ul className="flex gap-8 font-semibold uppercase text-xl">
             <li
-              className={`nav-items ${
-                scrollTarget === "hero" && "border-opacity-100"
-              }`}
+              className={`nav-items ${scrollTarget === "hero" && scrollClass}`}
             >
               <a href="#hero">Home</a>
             </li>
             <li
               className={`nav-items ${
-                scrollTarget === "why-me" && "border-opacity-100"
+                scrollTarget === "why-me" && scrollClass
               }`}
             >
               <a href="#why-me">Why Me?</a>
             </li>
             <li
               className={`nav-items ${
-                scrollTarget === "my-work" && "border-opacity-100"
+                scrollTarget === "my-work" && scrollClass
               }`}
             >
               <a href="#my-work">My Work</a>
             </li>
             <li
               className={`nav-items ${
-                scrollTarget === "contact" && "border-opacity-100"
+                scrollTarget === "contact" && scrollClass
               }`}
             >
               <a href="#contact">Contact</a>
