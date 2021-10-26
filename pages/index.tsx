@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState, WheelEventHandler } from "react";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import MyWork from "../components/MyWork";
 import NavBar from "../components/NavBar";
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <MyWork handleScroll={handleScroll} />
         <Contact handleScroll={handleScroll} />
       </main>
+      <Footer />
     </div>
   );
 };
