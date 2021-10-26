@@ -12,7 +12,7 @@ module.exports = {
         pink: "hsl(330, 100%, 70%)",
         purple: "hsl(264, 84%, 51%)",
         white: "hsl(330, 60%, 98%)",
-        "white-trans": "hsla(330, 60%, 98%, 0.75)",
+        "white-trans": "hsla(330, 60%, 98%, 0.5)",
         black: "hsl(240, 21%, 12%)",
       },
     },

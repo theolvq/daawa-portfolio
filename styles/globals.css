@@ -14,7 +14,7 @@
   }
 
   h3 {
-    @apply text-4xl font-bold mb-8;
+    @apply text-3xl sm:text-4xl font-bold mb-2 sm:mb-8;
   }
 
   h4 {
