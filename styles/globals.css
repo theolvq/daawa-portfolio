@@ -22,11 +22,12 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-white text-gray-500;
+    @apply overflow-x-hidden bg-white text-gray-500 h-full;
   }
 
   html {
     scroll-behavior: smooth;
+    height: 100%;
   }
 
   [type="text"],
@@ -64,8 +65,8 @@
   }
 
   .card {
-    @apply flex md:flex-row md:even:flex-row-reverse flex-col-reverse items-center gap-8 lg:gap-16
-    space-y-4  sm:my-16 mx-8 sm:p-8  lg:mx-auto shadow-lg md:shadow-none rounded-xl;
+    @apply flex lg:flex-row lg:even:flex-row-reverse flex-col-reverse items-center gap-8 lg:gap-16
+    space-y-4  sm:my-16 mx-8 lg:p-8  lg:mx-auto shadow-lg lg:shadow-none rounded-xl;
   }
 
   .card-btn {
