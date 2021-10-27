@@ -10,7 +10,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
   const scrollClass = "translate-y-2 text-cyan font-bold";
 
   return (
-    <header className="sticky z-50 top-0 left-0  bg-black text-white h-16">
+    <header className="fixed w-full z-50 top-0 left-0  bg-black text-white h-16">
       <div className="flex items-center justify-between h-full max-w-6xl mx-auto px-4">
         <h4 className="lg:absolute bg-gradient-to-br from-white to-pink via-cyan bg-clip-text text-transparent ">
           <span>Théo</span> <span className="">Lévêque</span>

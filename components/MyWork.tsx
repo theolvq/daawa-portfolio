@@ -1,4 +1,5 @@
 import React from "react";
+import projects from "../lib/projects";
 import { SectionProps } from "../types";
 import MyWorkCard from "./MyWorkCard";
 
@@ -11,10 +12,9 @@ const MyWork: React.FC<SectionProps> = ({ handleScroll }) => {
     >
       <h2>My Work</h2>
       <div className="space-y-8">
-        <MyWorkCard />
-        <MyWorkCard />
-        <MyWorkCard />
-        <MyWorkCard />
+        {projects.map((project) => (
+          <MyWorkCard project={project} key={project.title} />
+        ))}
       </div>
     </section>
   );

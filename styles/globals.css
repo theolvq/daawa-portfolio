@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply text-4xl  md:text-6xl lg:text-7xl  font-extrabold;
+    @apply text-4xl  md:text-6xl lg:text-7xl  font-extrabold text-center lg:text-left;
   }
 
   h2 {
@@ -28,6 +28,7 @@
   html {
     scroll-behavior: smooth;
   }
+
   [type="text"],
   [type="email"],
   textarea {
@@ -45,12 +46,12 @@
 
 @layer components {
   .background-image {
-    background-image: url("../lib/images/profile-pic-shadow-cyan.png");
-    height: 400px;
-    width: 300px;
+    background-image: url("../lib/images/pic-shadow.svg");
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 8%;
+    left: 12%;
     z-index: -5;
   }
 
