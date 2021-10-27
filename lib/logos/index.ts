@@ -2,7 +2,7 @@ import css from "./css.svg";
 import git from "./git.svg";
 import graphql from "./graphql.svg";
 import html from "./HTML.svg";
-import jest from "./jest.png";
+import jest from "./jest.svg";
 import js from "./JS.svg";
 import MUI from "./MUI.svg";
 import next from "./next.svg";
@@ -22,7 +22,9 @@ const images = [
   ts,
   react,
   redux,
+  next,
   css,
+  tailwind,
   sass,
   styledComponents,
   MUI,

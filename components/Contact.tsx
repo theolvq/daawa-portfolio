@@ -13,7 +13,7 @@ const Contact: React.FC<SectionProps> = ({ handleScroll }) => {
   }
 
   return (
-    <section id="contact" onWheel={handleScroll} className="pb-32">
+    <section id="contact" onWheel={handleScroll} className="pt-16 pb-32">
       <h2>Let&#39;s Chat!</h2>
       <form
         className="flex flex-col gap-4 justify-center items-center max-w-sm mx-auto font-semibold p-12 rounded-xl shadow-lg"

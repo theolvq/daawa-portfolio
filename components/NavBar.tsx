@@ -7,16 +7,24 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
   const [showNav, setShowNav] = useState(false);
 
-  const scrollClass = "translate-y-2 text-cyan font-bold";
+  const scrollClass = `${
+    showNav ? "translate-x-2" : "translate-y-2"
+  }  text-cyan font-bold`;
+  const mobileNavClass =
+    "flex-col items-end gap-2 absolute right-0 top-16 bg-black px-8 py-4 w-full z-40";
 
   return (
-    <header className="fixed w-full z-50 top-0 left-0  bg-black text-white h-16">
+    <header className="fixed w-full z-30 top-0 left-0  bg-black text-white h-16">
       <div className="flex items-center justify-between h-full max-w-6xl mx-auto px-4">
         <h4 className="lg:absolute bg-gradient-to-br from-white to-pink via-cyan bg-clip-text text-transparent ">
           <span>Théo</span> <span className="">Lévêque</span>
         </h4>
-        <nav className="mx-auto hidden lg:block">
-          <ul className="flex gap-8 font-semibold uppercase text-xl">
+        <nav className={`mx-auto lg:block ${showNav ? "block" : "hidden"} `}>
+          <ul
+            className={`flex ${
+              showNav && mobileNavClass
+            } gap-8 font-semibold uppercase text-xl`}
+          >
             <li
               className={`nav-items ${scrollTarget === "hero" && scrollClass}`}
             >
@@ -48,7 +56,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
         <button onClick={() => setShowNav((prev) => !prev)}>
           {!showNav ? (
             <svg
-              className="lg:hidden w-6 h-6"
+              className="lg:hidden w-6 h-6 z-50"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -63,7 +71,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
             </svg>
           ) : (
             <svg
-              className="lg:hidden w-6 h-6"
+              className="lg:hidden w-6 h-6 z-50"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

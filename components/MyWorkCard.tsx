@@ -18,8 +18,8 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
   const { title, description, technologies, image, repoUrl, hostedUrl } =
     project;
   return (
-    <section className="relative sm:flex even:flex-row-reverse items-center space-y-4 gap-8 lg:gap-16 sm:my-16 mx-8 lg:mx-auto">
-      <div className="sm:static absolute bottom-0 z-40 py-2 px-8 w-full bg-white-trans backdrop-filter backdrop-blur-md">
+    <section className="card">
+      <div className="pb-4 px-8 w-full">
         <h3 className="text-purple tracking-widest leading-none">{title}</h3>
         <p className="mb-8 text-sm hidden sm:block  ">{description}</p>
         <p className="sm:text-lg text-sm text-black font-semibold tracking-wide mb-8">
@@ -29,9 +29,9 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
             </span>
           ))}
         </p>
-        <div className="flex gap-8 justify-center">
+        <div className="flex gap-8 justify-center items-center">
           <a
-            className="bg-cyan px-6 py-3 rounded-lg text-black font-semibold shadow-sm  hover:scale-110 hover:shadow-lg transition-all duration-150"
+            className="card-btn"
             href={hostedUrl}
             target={title !== "My Personal Website" ? "_blank" : "_top"}
             rel="noopener noreferrer"
@@ -39,7 +39,7 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
             Live Preview
           </a>{" "}
           <a
-            className="bg-cyan px-6 py-3 rounded-lg text-black font-semibold shadow-sm  hover:scale-110 hover:shadow-lg transition-all duration-150"
+            className="card-btn"
             href={repoUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -48,11 +48,11 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
           </a>
         </div>
       </div>
-      <div className="relative shadow-lg w-full rounded-xl">
+      <div className="relative w-full md:shadow-lg">
         <Image
           src={image}
           alt="Screenshot of a weather application"
-          className="rounded-xl"
+          className="rounded-lg"
           layout="responsive"
           placeholder="blur"
         />
