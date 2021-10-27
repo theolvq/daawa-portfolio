@@ -62,10 +62,3 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
 };
 
 export default MyWorkCard;
-// title: "Weather App",
-// description:
-//   "A weather app built with Open Weather API, search for your city!",
-// technologies: ["React", "Tailwind", "Open Weather API", "Firebase"],
-// image: weatherApp,
-// repoUrl: "",
-// hostedUrl: "https://weather-app.theoleveque.com",

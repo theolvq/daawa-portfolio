@@ -1,5 +1,6 @@
-import weatherApp from "../images/weather-app-desktop-4:3.png";
+import weatherApp from "../images/weather-app-desktop-4:3.jpg";
 import spacestagram from "../images/spacestagram-desktop-4:3.jpg";
+import portfolio from "../images/portfolio-desktop-4:3.jpg";
 
 const projects = [
   {
@@ -16,7 +17,7 @@ const projects = [
     description:
       "My website to showcase my projects and be found by awesome people like you!",
     technologies: ["TypeScript", "React", "Next", "Tailwind"],
-    image: weatherApp,
+    image: portfolio,
     repoUrl: "https://github.com/daawascript/daawa-portfolio",
     hostedUrl: "#hero",
   },
@@ -24,7 +25,7 @@ const projects = [
     title: "Weather App",
     description:
       "A weather app built with Open Weather API, search for your city!",
-    technologies: ["React", "Tailwind", "Open Weather API", "Firebase"],
+    technologies: ["React", "Tailwind", "Firebase", "Open Weather API"],
     image: weatherApp,
     repoUrl: "https://github.com/daawascript/weather-app",
     hostedUrl: "https://weather-app.theoleveque.com",
