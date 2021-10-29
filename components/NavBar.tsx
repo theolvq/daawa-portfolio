@@ -28,32 +28,43 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
             <li
               className={`nav-items ${scrollTarget === 'hero' && scrollClass}`}
             >
-              <a href='#hero'>Home</a>
+              <a aria-label='Link to home section' href='#hero'>
+                Home
+              </a>
             </li>
             <li
               className={`nav-items ${
                 scrollTarget === 'why-me' && scrollClass
               }`}
             >
-              <a href='#why-me'>Why Me?</a>
+              <a aria-label='Link to why me section' href='#why-me'>
+                Why Me?
+              </a>
             </li>
             <li
               className={`nav-items ${
                 scrollTarget === 'my-work' && scrollClass
               }`}
             >
-              <a href='#my-work'>My Work</a>
+              <a aria-label='link to my work section' href='#my-work'>
+                My Work
+              </a>
             </li>
             <li
               className={`nav-items ${
                 scrollTarget === 'contact' && scrollClass
               }`}
             >
-              <a href='#contact'>Contact</a>
+              <a aria-label='link to contact form' href='#contact'>
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
-        <button onClick={() => setShowNav((prev) => !prev)}>
+        <button
+          aria-label='toggle mobile navigation'
+          onClick={() => setShowNav((prev) => !prev)}
+        >
           {!showNav ? (
             <svg
               className='lg:hidden w-6 h-6 z-50'

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 @layer base {
   h1 {
@@ -30,8 +30,8 @@
     height: 100%;
   }
 
-  [type="text"],
-  [type="email"],
+  [type='text'],
+  [type='email'],
   textarea {
     @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
     focus:border-purple focus:ring-purple 
@@ -39,7 +39,7 @@
   }
 
   label {
-    @apply font-normal absolute left-2 -top-3  text-xs rounded-full py-1 px-2 bg-white
+    @apply font-normal absolute z-10 left-2 -top-3  text-xs rounded-full py-1 px-2 bg-white
     peer-placeholder-shown:text-base  peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
     transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
   }
@@ -47,7 +47,7 @@
 
 @layer components {
   .background-image {
-    background-image: url("../lib/images/pic-shadow.svg");
+    background-image: url('../lib/images/pic-shadow.svg');
     height: 100%;
     width: 100%;
     position: absolute;

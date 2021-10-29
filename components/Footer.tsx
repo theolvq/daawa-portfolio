@@ -2,11 +2,12 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='py-16'>
+    <footer className='py-16 bg-black text-white'>
       <div className='mx-auto max-w-6xl flex flex-col justify-center items-center space-y-8'>
-        <h4>Find me on the internet!</h4>
+        <h3 className='text-2xl'>Find me on the internet!</h3>
         <div className='flex gap-8'>
           <a
+            aria-label='send an email to theo.leveque@gmail.com'
             href='mailto:theoleveque@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
             </svg>
           </a>
           <a
+            aria-label="Theo's linkedin profile"
             href='https://www.linkedin.com/in/theoleveque/'
             target='_blank'
             rel='noopener noreferrer'
@@ -41,6 +43,7 @@ const Footer: React.FC = () => {
             </svg>
           </a>
           <a
+            aria-label="Theo's github profile"
             href='https://github.com/daawascript'
             target='_blank'
             rel='noopener noreferrer'

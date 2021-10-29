@@ -29,6 +29,7 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
         </p>
         <div className='flex gap-8 justify-center items-center'>
           <a
+            aria-label={`View ${title}'s live preview'`}
             className='card-btn'
             href={hostedUrl}
             target={title !== 'My Personal Website' ? '_blank' : '_top'}
@@ -37,6 +38,7 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
             Live Preview
           </a>{' '}
           <a
+            aria-label={`View ${title}'s code on github'`}
             className='card-btn'
             href={repoUrl}
             target='_blank'

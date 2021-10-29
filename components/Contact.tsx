@@ -60,25 +60,12 @@ const Contact: React.FC<SectionProps> = ({ handleScroll }) => {
           />
         </div>
         <button
+          aria-label='Submit contact form'
           className='flex gap-3 items-center bg-purple max-w-max py-2 px-8 rounded-lg text-white font-bold shadow-md hover:bg-opacity-75 hover:shadow-lg hover:scale-110 transition-all'
           type='submit'
           disabled={state.submitting}
         >
           Send{' '}
-          {/* <svg
-            className="w-5 h-5 transform rotate-90 "
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-            />
-          </svg> */}
         </button>
       </form>
     </section>
