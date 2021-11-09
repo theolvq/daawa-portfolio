@@ -72,4 +72,28 @@
   .card-btn {
     @apply bg-cyan sm:px-6 sm:py-3 px-3 py-1.5 rounded-lg text-black font-semibold shadow-sm  hover:scale-110 hover:shadow-lg transition-all duration-150;
   }
+  .card-link {
+    @apply text-cyan hover:underline;
+  }
+
+  .tooltip {
+    @apply invisible group-hover:visible absolute -top-8 left-1/2 
+    transform -translate-x-1/2 -translate-y-1/2  z-10 
+    px-2 py-1 bg-white text-black 
+    flex justify-center items-center 
+    rounded-sm capitalize;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    bottom: -1rem;
+    color: white;
+    width: 0;
+    height: 0;
+    border: 0.5rem solid hsla(330, 70%, 98%, 1);
+    border-top-color: hsla(330, 70%, 98%, 1);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
 }

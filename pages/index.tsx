@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useState, WheelEventHandler } from 'react';
+import { UIEventHandler, useEffect, useState, WheelEventHandler } from 'react';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -9,9 +9,17 @@ import NavBar from '../components/NavBar';
 import WhyMe from '../components/WhyMe';
 
 const Home: NextPage = () => {
-  const [scrollTarget, setScrollTarget] = useState('');
+  const [scrollTarget, setScrollTarget] = useState('hero');
+  const [showNav, setShowNav] = useState(false);
+
+  const handleNavClose = (): void => {
+    if (showNav) {
+      setShowNav(false);
+    }
+  };
 
   const handleScroll: WheelEventHandler<HTMLElement> = (e) => {
+    console.log(e.currentTarget.id);
     setScrollTarget(e.currentTarget.id);
   };
 
@@ -22,8 +30,12 @@ const Home: NextPage = () => {
         <meta name='description' content="Théo Lévêque's personal website" />
         <link rel='icon' href='/favicon.svg' />
       </Head>
-      <NavBar scrollTarget={scrollTarget} />
-      <main className='min-h-screen'>
+      <NavBar
+        scrollTarget={scrollTarget}
+        showNav={showNav}
+        setShowNav={setShowNav}
+      />
+      <main className='min-h-screen' onClick={handleNavClose}>
         <Hero handleScroll={handleScroll} />
         <WhyMe handleScroll={handleScroll} />
         <MyWork handleScroll={handleScroll} />

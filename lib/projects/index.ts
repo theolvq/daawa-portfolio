@@ -1,6 +1,5 @@
 import weatherApp from '../images/weather-app-desktop-4:3.jpg';
 import spacestagram from '../images/spacestagram-desktop-4:3.jpg';
-import portfolio from '../images/portfolio-desktop-4:3.jpg';
 
 const projects = [
   {
@@ -11,15 +10,6 @@ const projects = [
     image: spacestagram,
     repoUrl: 'https://github.com/daawascript/spacestagram',
     hostedUrl: 'http://spacestagram.theoleveque.com',
-  },
-  {
-    title: 'My Personal Website',
-    description:
-      'My website to showcase my projects and be found by awesome people like you!',
-    technologies: ['TypeScript', 'React', 'Next', 'Tailwind'],
-    image: portfolio,
-    repoUrl: 'https://github.com/daawascript/daawa-portfolio',
-    hostedUrl: '#hero',
   },
   {
     title: 'Weather App',

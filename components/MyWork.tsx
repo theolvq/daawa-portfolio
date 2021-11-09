@@ -5,16 +5,14 @@ import MyWorkCard from './MyWorkCard';
 
 const MyWork: React.FC<SectionProps> = ({ handleScroll }) => {
   return (
-    <section
-      id='my-work'
-      onWheel={handleScroll}
-      className='max-w-6xl mx-auto my-16 '
-    >
-      <h2>My Work</h2>
-      <div className='space-y-8'>
-        {projects.map((project) => (
-          <MyWorkCard project={project} key={project.title} />
-        ))}
+    <section id='my-work' onWheel={handleScroll} className='my-16 w-full '>
+      <div className='max-w-6xl mx-auto '>
+        <h2>My Work</h2>
+        <div className='space-y-8'>
+          {projects.map((project) => (
+            <MyWorkCard project={project} key={project.title} />
+          ))}
+        </div>
       </div>
     </section>
   );

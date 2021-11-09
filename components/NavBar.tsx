@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface NavBarProps {
   scrollTarget: string;
+  showNav: boolean;
+  setShowNav: (showNav: boolean) => void;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
-  const [showNav, setShowNav] = useState(false);
-
+const NavBar: React.FC<NavBarProps> = ({
+  scrollTarget,
+  showNav,
+  setShowNav,
+}) => {
   const scrollClass = `${
     showNav ? 'translate-x-2' : 'translate-y-2'
   }  text-cyan font-bold`;
   const mobileNavClass =
-    'flex-col items-end gap-2 absolute right-0 top-16 bg-black px-8 py-4 w-full z-40';
+    'flex-col items-end gap-8 absolute right-0 top-16 bg-black px-8 pt-4 pb-8 w-full z-40';
 
   return (
     <header className='fixed w-full z-30 top-0 left-0  bg-black text-white h-16'>
       <div className='flex items-center justify-between h-full max-w-6xl mx-auto px-4'>
         <h4 className='lg:absolute bg-gradient-to-br from-white to-pink via-cyan bg-clip-text text-transparent '>
-          <span>Théo</span> <span className=''>Lévêque</span>
+          Théo Lévêque
         </h4>
-        <nav className={`mx-auto lg:block ${showNav ? 'block' : 'hidden'} `}>
+        <nav
+          className={`mx-auto lg:block ${showNav ? 'block' : 'hidden'} `}
+          onClick={() => setShowNav(false)}
+        >
           <ul
             className={`flex ${
               showNav && mobileNavClass
@@ -63,7 +70,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollTarget }) => {
         </nav>
         <button
           aria-label='toggle mobile navigation'
-          onClick={() => setShowNav((prev) => !prev)}
+          onClick={() => setShowNav(!showNav)}
         >
           {!showNav ? (
             <svg

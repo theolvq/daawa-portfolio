@@ -6,7 +6,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb-typescript/base",
+    "airbnb-typescript",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
   ],

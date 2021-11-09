@@ -16,7 +16,7 @@ const WhyMeList: React.FC = () => {
           <h3 className='about-subtitle'>Self Taught</h3>
           <ul>
             <li>Curious</li>
-            <li>Ressourceful</li>
+            <li>Resourceful</li>
             <li>Love Challenges</li>
           </ul>
         </li>
