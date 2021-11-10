@@ -1,12 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SectionProps } from '../types';
-import { useForm, ValidationError } from '@formspree/react';
 import { InView } from 'react-intersection-observer';
+import axios from 'axios';
 
 const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
-  const [state, handleSubmit] = useForm('xbjqewjn');
+  const [body, setBody] = useState({
+    email: '',
+    name: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
-  if (state.succeeded) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setBody({
+      ...body,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      await axios({
+        url: '/api/contact',
+        method: 'POST',
+        data: JSON.stringify(body),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      setBody({
+        email: '',
+        name: '',
+        message: '',
+      });
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    } catch (err) {
+      console.error(err);
+      setIsError(true);
+    }
+  };
+
+  if (isSuccess) {
     return (
       <p className='mx-auto my-8 w-max text-xl'>
         Thanks for reaching out, I&#39;ll get back to you in less than 24 hours!
@@ -14,7 +55,13 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
     );
   }
 
-  console.log(state);
+  if (isError) {
+    return (
+      <p className='mx-auto my-8 w-max text-xl text-red-500'>
+        There was an error sending your message, please try again later.
+      </p>
+    );
+  }
 
   return (
     <InView onChange={handleSectionChange}>
@@ -32,6 +79,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
           >
             <div className='relative w-full'>
               <input
+                onChange={handleChange}
                 type='email'
                 name='email'
                 id='email'
@@ -41,14 +89,10 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 required={true}
               />
               <label htmlFor='email'>Email address</label>
-              <ValidationError
-                prefix='email'
-                field='email'
-                errors={state.errors}
-              />
             </div>
             <div className='w-full relative'>
               <input
+                onChange={handleChange}
                 type='text'
                 name='name'
                 id='name'
@@ -58,14 +102,10 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 required={true}
               />
               <label htmlFor='name'>Your Name</label>
-              <ValidationError
-                prefix='name'
-                field='name'
-                errors={state.errors}
-              />
             </div>
             <div className='relative'>
               <textarea
+                onChange={handleChange}
                 name='message'
                 id='message'
                 cols={30}
@@ -75,17 +115,12 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 required={true}
               />
               <label htmlFor='message'>Your message for me</label>
-              <ValidationError
-                prefix='message'
-                field='message'
-                errors={state.errors}
-              />
             </div>
             <button
               aria-label='Submit contact form'
               className='flex gap-3 items-center bg-purple max-w-max py-2 px-8 rounded-lg text-white font-bold shadow-md hover:bg-opacity-80 hover:shadow-lg hover:scale-110 transition-all'
               type='submit'
-              disabled={state.submitting}
+              disabled={isSubmitting}
             >
               Send{' '}
             </button>
