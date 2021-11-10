@@ -21,7 +21,14 @@ const NavBar: React.FC<NavBarProps> = ({
     <header className='fixed w-full z-30 top-0 left-0  bg-black text-white h-16'>
       <div className='flex items-center justify-between h-full max-w-6xl mx-auto px-4'>
         <h4 className='lg:absolute bg-gradient-to-br from-white to-pink via-cyan bg-clip-text text-transparent '>
-          Théo Lévêque
+          <a
+            aria-label="Theo's github profile"
+            href='https://github.com/daawascript'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Théo Lévêque
+          </a>
         </h4>
         <nav
           className={`mx-auto lg:block ${showNav ? 'block' : 'hidden'} `}

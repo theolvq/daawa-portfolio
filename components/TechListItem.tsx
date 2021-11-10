@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 interface ILogo {
@@ -15,21 +15,15 @@ interface IProps {
 }
 
 const TechListItem: React.FC<IProps> = ({ logo }) => {
-  const [showTooltip, setShowTooltip] = useState(false);
-
   return (
     <div
       key={logo.id}
       className='group relative w-14 m-auto transform hover:-translate-y-4 transition-transform duration-200'
-      onMouseEnter={() => setShowTooltip(true)}
-      onMouseLeave={() => setShowTooltip(false)}
     >
-      {showTooltip && (
-        <div className='tooltip'>
-          <span>{logo.name}</span>
-          <div className='tooltip-arrow' />
-        </div>
-      )}
+      <div className='tooltip'>
+        <span>{logo.name}</span>
+        <div className='tooltip-arrow' />
+      </div>
       <Image
         src={logo}
         alt={`${logo.name}'s logo'`}
