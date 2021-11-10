@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { UIEventHandler, useEffect, useState, WheelEventHandler } from 'react';
+import { useState } from 'react';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -18,9 +18,13 @@ const Home: NextPage = () => {
     }
   };
 
-  const handleScroll: WheelEventHandler<HTMLElement> = (e) => {
-    console.log(e.currentTarget.id);
-    setScrollTarget(e.currentTarget.id);
+  const handleSectionChange = (
+    inView: boolean,
+    entry: IntersectionObserverEntry,
+  ) => {
+    if (entry.isIntersecting) {
+      setScrollTarget(entry.target.id);
+    }
   };
 
   return (
@@ -36,10 +40,22 @@ const Home: NextPage = () => {
         setShowNav={setShowNav}
       />
       <main className='min-h-screen' onClick={handleNavClose}>
-        <Hero handleScroll={handleScroll} />
-        <WhyMe handleScroll={handleScroll} />
-        <MyWork handleScroll={handleScroll} />
-        <Contact handleScroll={handleScroll} />
+        <Hero
+          setScrollTarget={setScrollTarget}
+          handleSectionChange={handleSectionChange}
+        />
+        <WhyMe
+          setScrollTarget={setScrollTarget}
+          handleSectionChange={handleSectionChange}
+        />
+        <MyWork
+          setScrollTarget={setScrollTarget}
+          handleSectionChange={handleSectionChange}
+        />
+        <Contact
+          setScrollTarget={setScrollTarget}
+          handleSectionChange={handleSectionChange}
+        />
       </main>
       <Footer />
     </div>

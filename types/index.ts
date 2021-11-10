@@ -1,5 +1,9 @@
-import { WheelEventHandler } from 'react';
+import React, { Dispatch } from 'react';
 
 export interface SectionProps {
-  handleScroll: WheelEventHandler<HTMLElement>;
+  setScrollTarget: Dispatch<React.SetStateAction<string>>;
+  handleSectionChange: (
+    inView: boolean,
+    entry: IntersectionObserverEntry,
+  ) => void;
 }
