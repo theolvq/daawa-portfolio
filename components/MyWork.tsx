@@ -8,8 +8,8 @@ const MyWork: React.FC<SectionProps> = ({ handleSectionChange }) => {
   return (
     <InView onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id='my-work' className='my-16 w-full '>
-          <div className='max-w-6xl mx-auto '>
+        <section ref={ref} id='my-work' className='w-full '>
+          <div className='max-w-6xl mx-auto py-16'>
             <h2>My Work</h2>
             <div className='space-y-8'>
               {projects.map((project) => (

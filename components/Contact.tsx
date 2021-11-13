@@ -68,63 +68,76 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
       {({ ref }) => (
         <section ref={ref} id='contact' className='pt-16 pb-32'>
           <h2>Let&#39;s Chat!</h2>
-          <p className='mb-8 text-lg text-center'>
-            I am open to opportunities both full-time and freelance work.
-            <br />
-            If you&#39;d like to work together, please reach out!
-          </p>
-          <form
-            className='flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-12 rounded-xl shadow-lg'
-            onSubmit={handleSubmit}
-          >
-            <div className='relative w-full'>
-              <input
-                onChange={handleChange}
-                type='email'
-                name='email'
-                id='email'
-                placeholder='Email address'
-                className='peer'
-                autoComplete='email'
-                required={true}
-              />
-              <label htmlFor='email'>Email address</label>
-            </div>
-            <div className='w-full relative'>
-              <input
-                onChange={handleChange}
-                type='text'
-                name='name'
-                id='name'
-                placeholder='Your Name'
-                className='peer'
-                autoComplete='name'
-                required={true}
-              />
-              <label htmlFor='name'>Your Name</label>
-            </div>
-            <div className='relative'>
-              <textarea
-                onChange={handleChange}
-                name='message'
-                id='message'
-                cols={30}
-                rows={10}
-                placeholder='Your Message for me'
-                className='peer h-48'
-                required={true}
-              />
-              <label htmlFor='message'>Your message for me</label>
-            </div>
-            <button
-              aria-label='Submit contact form'
-              className='flex gap-3 items-center bg-purple max-w-max py-2 px-8 rounded-lg text-white font-bold shadow-md hover:bg-opacity-80 hover:shadow-lg hover:scale-110 transition-all'
-              type='submit'
-              disabled={isSubmitting}
-            >
-              Send{' '}
-            </button>
-          </form>
+          {isSuccess ? (
+            <p className='mx-auto my-8 w-max text-xl'>
+              Thanks for reaching out, I&#39;ll get back to you in less than 24
+              hours!
+            </p>
+          ) : isError ? (
+            <p className='mx-auto my-8 w-max text-xl text-red-500'>
+              There was an error sending your message, please try again later.
+            </p>
+          ) : (
+            <>
+              <p className='mb-8 text-lg text-center'>
+                I am open to opportunities both full-time and freelance work.
+                <br />
+                If you&#39;d like to work together, please reach out!
+              </p>
+              <form
+                className='flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-12 rounded-xl shadow-lg'
+                onSubmit={handleSubmit}
+              >
+                <div className='relative w-full'>
+                  <input
+                    onChange={handleChange}
+                    type='email'
+                    name='email'
+                    id='email'
+                    placeholder='Email address'
+                    className='peer'
+                    autoComplete='email'
+                    required={true}
+                  />
+                  <label htmlFor='email'>Email address</label>
+                </div>
+                <div className='w-full relative'>
+                  <input
+                    onChange={handleChange}
+                    type='text'
+                    name='name'
+                    id='name'
+                    placeholder='Your Name'
+                    className='peer'
+                    autoComplete='name'
+                    required={true}
+                  />
+                  <label htmlFor='name'>Your Name</label>
+                </div>
+                <div className='relative'>
+                  <textarea
+                    onChange={handleChange}
+                    name='message'
+                    id='message'
+                    cols={30}
+                    rows={10}
+                    placeholder='Your Message for me'
+                    className='peer h-48'
+                    required={true}
+                  />
+                  <label htmlFor='message'>Your message for me</label>
+                </div>
+                <button
+                  aria-label='Submit contact form'
+                  className='flex gap-3 items-center bg-purple max-w-max py-2 px-8 rounded-lg text-white font-bold shadow-md hover:bg-opacity-80 hover:shadow-lg hover:scale-110 transition-all'
+                  type='submit'
+                  disabled={isSubmitting}
+                >
+                  Send{' '}
+                </button>
+              </form>
+            </>
+          )}
         </section>
       )}
     </InView>
