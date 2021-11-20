@@ -6,7 +6,7 @@ import MyWorkCard from './MyWorkCard';
 
 const MyWork: React.FC<SectionProps> = ({ handleSectionChange }) => {
   return (
-    <InView onChange={handleSectionChange}>
+    <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id='my-work' className='w-full '>
           <div className='max-w-6xl mx-auto py-16'>
