@@ -64,7 +64,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
   }
 
   return (
-    <InView onChange={handleSectionChange}>
+    <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id='contact' className='pt-16 pb-32'>
           <h2>Let&#39;s Chat!</h2>
