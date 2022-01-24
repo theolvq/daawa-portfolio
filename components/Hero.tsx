@@ -18,12 +18,7 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 <br /> Front-End Developer
               </h1>
               <div className='relative'>
-                <Image
-                  src='/images/profile-pic.jpg'
-                  alt={"Theo Leveque's Portrait"}
-                  width={300}
-                  height={400}
-                />
+                <Image src={profilePic} alt={"Theo Leveque's Portrait"} />
                 <div className='background-image' />
               </div>
             </div>

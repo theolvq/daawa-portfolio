@@ -1,16 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import MyWork from '../components/MyWork';
 import NavBar from '../components/NavBar';
+import Snackbar from '../components/Snackbar';
 import WhyMe from '../components/WhyMe';
 
 const Home: NextPage = () => {
   const [scrollTarget, setScrollTarget] = useState('hero');
   const [showNav, setShowNav] = useState(false);
+  const [isUsingSafari, setIsUsingSafari] = useState(false);
 
   const handleNavClose = (): void => {
     if (showNav) {
@@ -27,6 +29,12 @@ const Home: NextPage = () => {
     }
   };
 
+  useEffect(() => {
+    if (navigator.userAgent.includes('Safari')) {
+      setIsUsingSafari(true);
+    }
+  }, []);
+
   return (
     <div>
       <Head>
@@ -39,6 +47,7 @@ const Home: NextPage = () => {
         showNav={showNav}
         setShowNav={setShowNav}
       />
+      {isUsingSafari && <Snackbar />}
       <main className='min-h-screen' onClick={handleNavClose}>
         <Hero
           setScrollTarget={setScrollTarget}
