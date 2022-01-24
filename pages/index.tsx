@@ -30,10 +30,12 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
+    console.log(navigator.userAgent);
+
     if (navigator.userAgent.includes('Safari')) {
       setIsUsingSafari(true);
     }
-  }, [isUsingSafari]);
+  }, []);
 
   return (
     <div>
