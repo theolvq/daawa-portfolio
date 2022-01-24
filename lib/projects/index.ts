@@ -1,7 +1,16 @@
-import weatherApp from '../images/weather-app-desktop-4:3.jpg';
 import spacestagram from '../images/spacestagram-desktop-4:3.jpg';
+import weatherApp from '../images/weather-app-desktop-4:3.jpg';
 
 const projects = [
+  {
+    title: 'Weather App',
+    description:
+      'A weather app built with Open Weather API, search for your city!',
+    technologies: ['React', 'Tailwind', 'Next.js', 'Open Weather API'],
+    image: weatherApp,
+    repoUrl: 'https://github.com/daawascript/weather-app',
+    hostedUrl: 'https://weather-app.theoleveque.com',
+  },
   {
     title: 'Spacestagram',
     description:
@@ -12,13 +21,13 @@ const projects = [
     hostedUrl: 'http://spacestagram.theoleveque.com',
   },
   {
-    title: 'Weather App',
+    title: 'Paint App',
     description:
-      'A weather app built with Open Weather API, search for your city!',
-    technologies: ['React', 'Tailwind', 'Firebase', 'Open Weather API'],
+      'A paint app built with Next and Konva during a hackathon organized by Mintbean.',
+    technologies: ['React', 'Tailwind', 'Next', 'Konva'],
     image: weatherApp,
-    repoUrl: 'https://github.com/daawascript/weather-app',
-    hostedUrl: 'https://weather-app.theoleveque.com',
+    repoUrl: 'https://github.com/daawascript/paint-app-mintbean-hackathon',
+    hostedUrl: 'https://paint-app.theoleveque.com',
   },
 ];
 
