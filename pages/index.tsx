@@ -33,7 +33,7 @@ const Home: NextPage = () => {
     if (navigator.userAgent.includes('Safari')) {
       setIsUsingSafari(true);
     }
-  }, []);
+  }, [isUsingSafari]);
 
   return (
     <div>
