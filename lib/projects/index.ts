@@ -1,5 +1,5 @@
-import spacestagram from '../images/spacestagram-desktop-4:3.jpg';
-import weatherApp from '../images/weather-app-desktop-4:3.jpg';
+import spacestagram from '../../public/images/spacestagram-desktop-4:3.jpg';
+import weatherApp from '../../public/images/weather-app-desktop-4:3.jpg';
 
 const projects = [
   {

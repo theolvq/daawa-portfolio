@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import topPattern from '../lib/images/hero-pattern-top.svg';
-import bottomPattern from '../lib/images/hero-pattern-bottom.svg';
+import topPattern from '../public/images/hero-pattern-top.svg';
+import bottomPattern from '../public/images/hero-pattern-bottom.svg';
 
 const HeroBackground: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../lib/images/profile-pic.jpg';
+import profilePic from '../public/images/profile-pic.jpg';
 import HeroBackground from './HeroBackground';
 import { SectionProps } from '../types';
 import { InView } from 'react-intersection-observer';

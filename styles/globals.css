@@ -47,7 +47,7 @@
 
 @layer components {
   .background-image {
-    background-image: url('../lib/images/pic-shadow.svg');
+    background-image: url('../public/images/pic-shadow.svg');
     height: 100%;
     width: 100%;
     position: absolute;
