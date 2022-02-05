@@ -17,7 +17,7 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 Hi I&#39;m Théo!
                 <br /> Front-End Developer
               </h1>
-              <div className='relative w-[300px]'>
+              <div className='relative w-full'>
                 <Image
                   src='/profile-pic.jpg'
                   alt="Theo Leveque's Portrait"
