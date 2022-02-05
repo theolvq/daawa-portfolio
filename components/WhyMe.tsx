@@ -8,7 +8,7 @@ const WhyMe: React.FC<SectionProps> = ({ handleSectionChange }) => {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id='why-me' className='mb-16'>
+        <section ref={ref} id='why-me'>
           <div className='bg-black py-16 text-center '>
             <h2 className='text-white'>Why Me?</h2>
             <WhyMeList />

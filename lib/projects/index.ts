@@ -22,15 +22,6 @@ const projects = [
     repoUrl: 'https://github.com/daawascript/spacestagram',
     hostedUrl: 'http://spacestagram.theoleveque.com',
   },
-  {
-    title: 'Paint App',
-    description:
-      'A paint app built with Next and Konva during a hackathon organized by Mintbean.',
-    technologies: ['React', 'Tailwind', 'Next', 'Konva'],
-    image: weatherApp,
-    repoUrl: 'https://github.com/daawascript/paint-app-mintbean-hackathon',
-    hostedUrl: 'https://paint-app.theoleveque.com',
-  },
 ];
 
 export default projects;
