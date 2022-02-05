@@ -19,7 +19,7 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
               </h1>
               <div className='relative w-[300px]'>
                 <Image
-                  src={profilePic}
+                  src='/profile-pic.jpg'
                   alt="Theo Leveque's Portrait"
                   layout='responsive'
                   width={300}
