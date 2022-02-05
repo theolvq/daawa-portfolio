@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../public/images/profile-pic.jpg';
+import profilePic from '../public/profile-pic.jpg';
 import HeroBackground from './HeroBackground';
 import { SectionProps } from '../types';
 import { InView } from 'react-intersection-observer';
@@ -19,7 +19,7 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
               </h1>
               <div className='relative w-[300px]'>
                 <Image
-                  src='https://res.cloudinary.com/daawascript/image/upload/v1644099886/portfolio/profile-pic_kxplov.jpg'
+                  src={profilePic}
                   alt="Theo Leveque's Portrait"
                   layout='responsive'
                   width={300}
