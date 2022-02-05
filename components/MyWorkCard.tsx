@@ -54,7 +54,8 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
           alt='Screenshot of a weather application'
           className='rounded-t-lg lg:rounded-lg'
           layout='responsive'
-          placeholder='blur'
+          width={400}
+          height={300}
         />
       </div>
     </section>

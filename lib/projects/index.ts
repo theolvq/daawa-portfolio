@@ -7,7 +7,8 @@ const projects = [
     description:
       'A weather app built with Open Weather API, search for your city!',
     technologies: ['React', 'Tailwind', 'Next.js', 'Open Weather API'],
-    image: weatherApp,
+    image:
+      'https://res.cloudinary.com/daawascript/image/upload/v1644099717/portfolio/weather-app_vdylym.png',
     repoUrl: 'https://github.com/daawascript/weather-app',
     hostedUrl: 'https://weather-app.theoleveque.com',
   },
@@ -16,7 +17,8 @@ const projects = [
     description:
       'Instagram-like feed build with the NASA Astronomy Picture Of the Day API. Infinite Scrolling so you could litterally spend your day scrolling!',
     technologies: ['TypeScript', 'React', 'Styled-Components', 'NASA API'],
-    image: spacestagram,
+    image:
+      'https://res.cloudinary.com/daawascript/image/upload/v1644099810/portfolio/spacestagram-desktop-4_3_wxlpc0.jpg',
     repoUrl: 'https://github.com/daawascript/spacestagram',
     hostedUrl: 'http://spacestagram.theoleveque.com',
   },
