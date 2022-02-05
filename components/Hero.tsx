@@ -17,13 +17,14 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 Hi I&#39;m Théo!
                 <br /> Front-End Developer
               </h1>
-              <div className='relative w-full'>
+              <div className='relative w-[300px]'>
                 <Image
                   src='/profile-pic.jpg'
                   alt="Theo Leveque's Portrait"
                   layout='responsive'
                   width={300}
                   height={400}
+                  priority={true}
                 />
                 <div className='background-image' />
               </div>
