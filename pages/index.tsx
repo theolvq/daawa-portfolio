@@ -12,7 +12,6 @@ import WhyMe from '../components/WhyMe';
 const Home: NextPage = () => {
   const [scrollTarget, setScrollTarget] = useState('hero');
   const [showNav, setShowNav] = useState(false);
-  const [isUsingSafari, setIsUsingSafari] = useState(false);
 
   const handleNavClose = (): void => {
     if (showNav) {
@@ -29,14 +28,6 @@ const Home: NextPage = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(navigator.userAgent);
-
-    if (navigator.userAgent.includes('Safari')) {
-      setIsUsingSafari(true);
-    }
-  }, []);
-
   return (
     <div>
       <Head>
@@ -49,7 +40,6 @@ const Home: NextPage = () => {
         showNav={showNav}
         setShowNav={setShowNav}
       />
-      {isUsingSafari && <Snackbar />}
       <main className='min-h-screen' onClick={handleNavClose}>
         <Hero
           setScrollTarget={setScrollTarget}
