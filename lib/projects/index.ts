@@ -1,6 +1,3 @@
-import spacestagram from '../../public/images/spacestagram-desktop-4:3.jpg';
-import weatherApp from '../../public/images/weather-app-desktop-4:3.jpg';
-
 const projects = [
   {
     title: 'Weather App',

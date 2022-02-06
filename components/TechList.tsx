@@ -1,5 +1,5 @@
 import React from 'react';
-import logos from '../lib/logos';
+import logos from '../public/logos';
 import TechListItem from './TechListItem';
 
 const TechList: React.FC = () => {
