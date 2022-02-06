@@ -57,7 +57,8 @@
   }
 
   .nav-items {
-    @apply hover:border-opacity-100 transform border-cyan border-b-4 border-opacity-0 transition-all duration-500;
+    @apply hover:border-opacity-100 transform border-cyan border-b-4 border-opacity-0 
+    transition-all duration-500;
   }
 
   .about-subtitle {
@@ -70,7 +71,9 @@
   }
 
   .card-btn {
-    @apply bg-blue-700 sm:px-6 sm:py-3 px-3 py-1.5 rounded-lg text-white font-semibold shadow-sm  hover:scale-110 hover:shadow-lg transition-all duration-150;
+    @apply bg-gradient-to-br from-purple to-cyan  hover:bg-gradient-to-tl
+     sm:px-6 sm:py-3 px-3 py-1.5 rounded-lg text-white font-semibold shadow-sm  
+     hover:scale-110 hover:shadow-lg transition-all duration-200 ease-in;
   }
   .card-link {
     @apply text-cyan hover:underline;
@@ -79,7 +82,7 @@
   .tooltip {
     @apply invisible group-hover:visible absolute -top-8 left-1/2 
     transform -translate-x-1/2 -translate-y-1/2  z-10 
-    px-2 py-1 bg-white text-black 
+    px-2 py-1  text-black 
     flex justify-center items-center 
     rounded-sm capitalize;
   }
