@@ -6,7 +6,7 @@ interface CardProps {
     title: string;
     description: string;
     technologies: string[];
-    image: StaticImageData;
+    image: string;
     repoUrl: string;
     hostedUrl: string;
   };
