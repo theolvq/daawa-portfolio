@@ -30,6 +30,7 @@ const TechListItem: React.FC<IProps> = ({ logo }) => {
         width={logo.width}
         height={logo.height}
         layout='responsive'
+        loading='eager'
       />
     </div>
   );
