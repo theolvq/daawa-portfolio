@@ -7,13 +7,14 @@ interface CardProps {
     description: string;
     technologies: string[];
     image: string;
+    alt: string;
     repoUrl: string;
     hostedUrl: string;
   };
 }
 
 const MyWorkCard: React.FC<CardProps> = ({ project }) => {
-  const { title, description, technologies, image, repoUrl, hostedUrl } =
+  const { title, description, technologies, image, alt, repoUrl, hostedUrl } =
     project;
   return (
     <section className='card'>
@@ -51,11 +52,12 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
       <div className='relative w-full lg:shadow-lg'>
         <Image
           src={image}
-          alt='Screenshot of a weather application'
+          alt={alt}
           className='rounded-t-lg lg:rounded-lg'
           layout='responsive'
           width={400}
           height={300}
+          loading='eager'
         />
       </div>
     </section>
