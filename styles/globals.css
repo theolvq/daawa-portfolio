@@ -72,8 +72,8 @@
 
   .card-btn {
     @apply bg-gradient-to-br from-purple to-cyan  hover:bg-gradient-to-tl
-     sm:px-6 sm:py-3 px-3 py-1.5 rounded-lg text-white font-semibold shadow-sm  
-     hover:scale-110 hover:shadow-lg transition-all duration-200 ease-in;
+     sm:px-6 sm:py-3 px-3 py-1.5 rounded-xl text-white font-semibold shadow-sm  
+     hover:scale-105 hover:shadow-lg transition-all duration-200 ease-in;
   }
   .card-link {
     @apply text-cyan hover:underline;

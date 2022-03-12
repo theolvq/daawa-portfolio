@@ -55,14 +55,6 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
     );
   }
 
-  if (isError) {
-    return (
-      <p className='mx-auto my-8 w-max text-xl text-red-500'>
-        There was an error sending your message, please try again later.
-      </p>
-    );
-  }
-
   return (
     <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (
@@ -79,15 +71,15 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
             </p>
           ) : (
             <>
-              <p className='mb-8 text-lg text-center'>
-                I am open to opportunities both full-time and freelance work.
-                <br />
-                If you&#39;d like to work together, please reach out!
-              </p>
               <form
                 className='flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-12 rounded-xl shadow-lg'
                 onSubmit={handleSubmit}
               >
+                <p className='mb-8 text-lg text-center'>
+                  I am open to opportunities.
+                  <br />
+                  Feel free to reach out!
+                </p>
                 <div className='relative w-full'>
                   <input
                     onChange={handleChange}
@@ -114,7 +106,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                   />
                   <label htmlFor='name'>Your Name</label>
                 </div>
-                <div className='relative'>
+                <div className='relative w-full'>
                   <textarea
                     onChange={handleChange}
                     name='message'
@@ -129,7 +121,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                 </div>
                 <button
                   aria-label='Submit contact form'
-                  className='flex gap-3 items-center bg-purple max-w-max py-2 px-8 rounded-lg text-white font-bold shadow-md hover:bg-opacity-80 hover:shadow-lg hover:scale-110 transition-all'
+                  className='card-btn'
                   type='submit'
                   disabled={isSubmitting}
                 >
