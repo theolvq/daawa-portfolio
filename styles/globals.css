@@ -6,15 +6,15 @@
 
 @layer base {
   h1 {
-    @apply text-4xl  md:text-6xl lg:text-7xl  font-extrabold text-center lg:text-left;
+    @apply text-center  text-4xl font-extrabold  md:text-6xl lg:text-left lg:text-7xl;
   }
 
   h2 {
-    @apply text-6xl font-extrabold text-black uppercase text-center mb-16;
+    @apply mb-16 text-center text-6xl font-extrabold uppercase text-black;
   }
 
   h3 {
-    @apply text-3xl sm:text-4xl font-bold mb-2 sm:mb-8;
+    @apply mb-2 text-xl font-bold sm:mb-8 sm:text-2xl;
   }
 
   h4 {
@@ -22,7 +22,7 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-white text-gray-500 h-full;
+    @apply h-full overflow-x-hidden bg-white text-gray-500;
   }
 
   html {
@@ -33,15 +33,15 @@
   [type='text'],
   [type='email'],
   textarea {
-    @apply w-full resize-none h-14 rounded-lg border-2 border-gray-200 
-    focus:border-purple focus:ring-purple 
-    shadow-sm placeholder-transparent;
+    @apply h-14 w-full resize-none rounded-lg border-2 border-gray-200 
+    placeholder-transparent shadow-sm 
+    focus:border-purple focus:ring-purple;
   }
 
   label {
-    @apply font-normal absolute z-10 left-2 -top-3  text-xs rounded-full py-1 px-2 bg-white
-    peer-placeholder-shown:text-base  peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
-    transition-all peer-focus:-top-3  peer-focus:text-xs peer-focus:bg-white;
+    @apply absolute left-2 -top-3 z-10 rounded-full  bg-white py-1 px-2 text-xs font-normal
+    transition-all  peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
+    peer-placeholder-shown:text-base peer-focus:-top-3  peer-focus:bg-white peer-focus:text-xs;
   }
 }
 
@@ -57,44 +57,38 @@
   }
 
   .nav-items {
-    @apply hover:border-opacity-100 transform border-cyan border-b-4 border-opacity-0 
-    transition-all duration-500;
+    @apply transform border-b-4 border-cyan border-opacity-0 transition-all 
+    duration-500 hover:border-opacity-100;
   }
 
   .about-subtitle {
-    @apply my-4 tracking-wider text-white;
-  }
-
-  .card {
-    @apply flex lg:flex-row lg:even:flex-row-reverse flex-col-reverse items-center gap-8 lg:gap-16
-    space-y-4  sm:my-16 mx-8 lg:p-8  lg:mx-auto shadow-lg lg:shadow-none rounded-xl;
+    @apply my-4 tracking-wider;
   }
 
   .card-btn {
-    @apply bg-gradient-to-br from-purple to-cyan  hover:bg-gradient-to-tl
-     sm:px-6 sm:py-3 px-3 py-1.5 rounded-xl text-white font-semibold shadow-sm  
-     hover:scale-105 hover:shadow-lg transition-all duration-200 ease-in;
+    @apply animate-gradient-hover rounded-xl bg-gradient-to-br  from-purple to-cyan px-3 py-1.5 font-semibold 
+    text-white shadow-sm transition-all duration-1000 ease-in hover:scale-105 hover:bg-gradient-to-tl hover:shadow-lg sm:px-6 sm:py-3;
   }
   .card-link {
     @apply text-cyan hover:underline;
   }
 
   .tooltip {
-    @apply invisible group-hover:visible absolute -top-8 left-1/2 
-    transform -translate-x-1/2 -translate-y-1/2  z-10 
-    px-2 py-1  text-black 
-    flex justify-center items-center 
-    rounded-sm capitalize;
+    @apply invisible absolute -top-8 left-1/2 z-10 flex 
+    -translate-x-1/2 -translate-y-1/2 transform  items-center 
+    justify-center whitespace-nowrap  rounded-sm bg-slate-50 px-2
+    py-0.5 text-sm font-medium capitalize text-slate-900 shadow-sm
+    shadow-gray-800 group-hover:visible;
   }
 
   .tooltip-arrow {
     position: absolute;
-    bottom: -1rem;
+    bottom: -0.8rem;
     color: white;
     width: 0;
     height: 0;
-    border: 0.5rem solid hsla(330, 70%, 98%, 1);
-    border-top-color: hsla(330, 70%, 98%, 1);
+    border: 0.4rem solid rgb(248, 250, 252);
+    border-top-color: rgb(248, 250, 252);
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;

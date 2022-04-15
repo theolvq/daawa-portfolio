@@ -17,18 +17,21 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
   const { title, description, technologies, image, alt, repoUrl, hostedUrl } =
     project;
   return (
-    <section className='card'>
-      <div className='pb-4 px-8 w-full'>
-        <h3 className='text-purple tracking-widest leading-none'>{title}</h3>
-        <p className='mb-8 text-sm hidden sm:block  '>{description}</p>
-        <p className='sm:text-lg text-sm text-black font-semibold tracking-wide mb-8'>
+    <section
+      className='group mx-8 flex flex-col-reverse items-center gap-8
+        rounded-xl shadow-lg sm:my-16 lg:mx-auto lg:flex-row lg:gap-16 lg:even:flex-row-reverse '
+    >
+      <div className='w-full px-8'>
+        <h3 className='leading-none tracking-widest text-purple'>{title}</h3>
+        <p className='mb-8 hidden text-sm sm:block'>{description}</p>
+        <p className='mb-8 text-sm font-semibold tracking-wide text-black sm:text-lg'>
           {technologies.map((techno, index: number) => (
             <span key={techno}>
               <span>{techno}</span> {index !== technologies.length - 1 && ' / '}{' '}
             </span>
           ))}
         </p>
-        <div className='flex gap-8 justify-center items-center'>
+        <div className='flex items-center justify-center gap-8'>
           <a
             aria-label={`View ${title}'s live preview'`}
             className='card-btn'
@@ -49,14 +52,12 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
           </a>
         </div>
       </div>
-      <div className='relative w-full lg:shadow-lg'>
+      <div className='relative aspect-[4/3] h-full w-full overflow-hidden object-cover'>
         <Image
           src={image}
           alt={alt}
-          className='rounded-t-lg lg:rounded-lg'
-          layout='responsive'
-          width={400}
-          height={300}
+          className='group rounded-t-xl group-odd:rounded-l-none group-even:rounded-r-none lg:rounded-xl'
+          layout='fill'
           loading='eager'
         />
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
 import { SectionProps } from '../types';
+import Blur from './Blur';
 import TechList from './TechList';
 import WhyMeList from './WhyMeList';
 
@@ -9,11 +10,16 @@ const WhyMe: React.FC<SectionProps> = ({ handleSectionChange }) => {
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
         <section ref={ref} id='why-me'>
-          <div className='bg-black py-16 text-center '>
+          <div className='relative py-16 text-center'>
+            <div className='absolute top-0 left-0 -z-10 h-full w-full bg-black'>
+              <Blur />
+              <Blur />
+              <Blur />
+            </div>
             <h2 className='text-white'>Why Me?</h2>
             <WhyMeList />
             {/* Todo: add more details as to why employers should hire me, maybe an interesting story */}
-            <h3 className='sm:pb-32 md:pb-16 pb-48 text-white'>
+            <h3 className='pb-48 text-white sm:pb-32 md:pb-16'>
               The Tech I Work With
             </h3>
           </div>

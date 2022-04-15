@@ -18,9 +18,9 @@ const NavBar: React.FC<NavBarProps> = ({
     'flex-col items-end gap-8 absolute right-0 top-16 bg-black px-8 pt-4 pb-8 w-full z-40';
 
   return (
-    <header className='fixed w-full z-30 top-0 left-0  bg-black text-white h-16'>
-      <div className='flex items-center justify-between h-full max-w-6xl mx-auto px-4'>
-        <h4 className='lg:absolute bg-gradient-to-br from-white to-pink via-cyan bg-clip-text text-transparent '>
+    <header className='fixed top-0 left-0 z-30 h-16  w-full bg-black bg-opacity-80 text-white shadow-md shadow-slate-700 backdrop-blur-lg'>
+      <div className='mx-auto flex h-full max-w-6xl items-center justify-between px-4'>
+        <h4 className='bg-gradient-to-br from-white via-cyan to-pink bg-clip-text text-transparent lg:absolute '>
           <a
             aria-label="Theo's github profile"
             href='https://github.com/daawascript'
@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({
           <ul
             className={`flex ${
               showNav && mobileNavClass
-            } gap-8 font-semibold uppercase text-xl`}
+            } gap-8 text-xl font-semibold uppercase`}
           >
             <li
               className={`nav-items ${scrollTarget === 'hero' && scrollClass}`}
@@ -81,7 +81,7 @@ const NavBar: React.FC<NavBarProps> = ({
         >
           {!showNav ? (
             <svg
-              className='lg:hidden w-6 h-6 z-50'
+              className='z-50 h-6 w-6 lg:hidden'
               fill='none'
               stroke='currentColor'
               viewBox='0 0 24 24'
@@ -96,7 +96,7 @@ const NavBar: React.FC<NavBarProps> = ({
             </svg>
           ) : (
             <svg
-              className='lg:hidden w-6 h-6 z-50'
+              className='z-50 h-6 w-6 lg:hidden'
               fill='none'
               stroke='currentColor'
               viewBox='0 0 24 24'
