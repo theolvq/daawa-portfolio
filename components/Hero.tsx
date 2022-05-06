@@ -8,7 +8,7 @@ const Hero: React.FC<SectionProps> = ({ handleSectionChange }) => {
   return (
     <InView threshold={0.5} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id='hero' className='min-h-screen w-full border-b-2 border-black'>
+        <section ref={ref} id='hero' className='h-screen w-full border-b-2 border-black'>
           <div className='mx-auto max-w-6xl px-16 pt-24 lg:py-32 xl:px-12'>
             <HeroBackground />
             <div className='flex flex-col items-center justify-between  gap-8 lg:flex-row lg:items-end'>
