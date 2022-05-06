@@ -14,12 +14,11 @@ interface CardProps {
 }
 
 const MyWorkCard: React.FC<CardProps> = ({ project }) => {
-  const { title, description, technologies, image, alt, repoUrl, hostedUrl } =
-    project;
+  const { title, description, technologies, image, alt, repoUrl, hostedUrl } = project;
   return (
     <section
       className='group mx-8 flex flex-col-reverse items-center gap-8
-        rounded-xl shadow-lg sm:my-16 lg:mx-auto lg:flex-row lg:gap-16 lg:even:flex-row-reverse '
+        overflow-hidden rounded-xl pb-4 shadow-lg sm:my-16 lg:mx-auto lg:flex-row lg:gap-16 lg:even:flex-row-reverse'
     >
       <div className='w-full px-8'>
         <h3 className='leading-none tracking-widest text-purple'>{title}</h3>

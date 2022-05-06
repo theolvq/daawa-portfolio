@@ -6,14 +6,8 @@ interface NavBarProps {
   setShowNav: (showNav: boolean) => void;
 }
 
-const NavBar: React.FC<NavBarProps> = ({
-  scrollTarget,
-  showNav,
-  setShowNav,
-}) => {
-  const scrollClass = `${
-    showNav ? 'translate-x-2' : 'translate-y-2'
-  }  text-cyan font-bold`;
+const NavBar: React.FC<NavBarProps> = ({ scrollTarget, showNav, setShowNav }) => {
+  const scrollClass = `${showNav ? 'translate-x-2' : 'translate-y-2'}  text-cyan font-bold`;
   const mobileNavClass =
     'flex-col items-end gap-8 absolute right-0 top-16 bg-black px-8 pt-4 pb-8 w-full z-40';
 
@@ -34,51 +28,30 @@ const NavBar: React.FC<NavBarProps> = ({
           className={`mx-auto lg:block ${showNav ? 'block' : 'hidden'} `}
           onClick={() => setShowNav(false)}
         >
-          <ul
-            className={`flex ${
-              showNav && mobileNavClass
-            } gap-8 text-xl font-semibold uppercase`}
-          >
-            <li
-              className={`nav-items ${scrollTarget === 'hero' && scrollClass}`}
-            >
+          <ul className={`flex ${showNav && mobileNavClass} gap-8 text-xl font-semibold uppercase`}>
+            <li className={`nav-items ${scrollTarget === 'hero' && scrollClass}`}>
               <a aria-label='Link to home section' href='#hero'>
                 Home
               </a>
             </li>
-            <li
-              className={`nav-items ${
-                scrollTarget === 'why-me' && scrollClass
-              }`}
-            >
+            <li className={`nav-items ${scrollTarget === 'why-me' && scrollClass}`}>
               <a aria-label='Link to why me section' href='#why-me'>
                 Why Me?
               </a>
             </li>
-            <li
-              className={`nav-items ${
-                scrollTarget === 'my-work' && scrollClass
-              }`}
-            >
+            <li className={`nav-items ${scrollTarget === 'my-work' && scrollClass}`}>
               <a aria-label='link to my work section' href='#my-work'>
                 My Work
               </a>
             </li>
-            <li
-              className={`nav-items ${
-                scrollTarget === 'contact' && scrollClass
-              }`}
-            >
+            <li className={`nav-items ${scrollTarget === 'contact' && scrollClass}`}>
               <a aria-label='link to contact form' href='#contact'>
                 Contact
               </a>
             </li>
           </ul>
         </nav>
-        <button
-          aria-label='toggle mobile navigation'
-          onClick={() => setShowNav(!showNav)}
-        >
+        <button aria-label='toggle mobile navigation' onClick={() => setShowNav(!showNav)}>
           {!showNav ? (
             <svg
               className='z-50 h-6 w-6 lg:hidden'

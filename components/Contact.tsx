@@ -13,9 +13,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setBody({
       ...body,
       [e.target.name]: e.target.value,
@@ -58,12 +56,11 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
   return (
     <InView threshold={0.2} onChange={handleSectionChange}>
       {({ ref }) => (
-        <section ref={ref} id='contact' className='pt-16 pb-32'>
+        <section ref={ref} id='contact' className='px-4 pt-16 pb-32'>
           <h2>Let&#39;s Chat!</h2>
           {isSuccess ? (
             <p className='mx-auto my-8 w-max text-xl'>
-              Thanks for reaching out, I&#39;ll get back to you in less than 24
-              hours!
+              Thanks for reaching out, I&#39;ll get back to you in less than 24 hours!
             </p>
           ) : isError ? (
             <p className='mx-auto my-8 w-max text-xl text-red-500'>
@@ -72,10 +69,10 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
           ) : (
             <>
               <form
-                className='flex flex-col gap-4 justify-center items-center max-w-sm mx-auto p-12 rounded-xl shadow-lg'
+                className='mx-auto flex max-w-sm flex-col items-center justify-center gap-4 rounded-xl p-6 shadow-lg'
                 onSubmit={handleSubmit}
               >
-                <p className='mb-8 text-lg text-center'>
+                <p className='mb-8 text-center text-lg'>
                   I am open to opportunities.
                   <br />
                   Feel free to reach out!
@@ -93,7 +90,7 @@ const Contact: React.FC<SectionProps> = ({ handleSectionChange }) => {
                   />
                   <label htmlFor='email'>Email address</label>
                 </div>
-                <div className='w-full relative'>
+                <div className='relative w-full'>
                   <input
                     onChange={handleChange}
                     type='text'
