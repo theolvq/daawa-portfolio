@@ -9,7 +9,7 @@ const HeroBackground: React.FC = () => {
       <div className='-z-10  w-full'>
         <Image src={topPattern} alt='' layout='responsive' />
       </div>
-      <div className='-z-10 w-full  2xl:w-1/2'>
+      <div className='-z-10 w-full'>
         <Image src={bottomPattern} alt='' layout='responsive' />
       </div>
     </div>

@@ -18,7 +18,7 @@ const MyWorkCard: React.FC<CardProps> = ({ project }) => {
   return (
     <section
       className='group mx-8 flex flex-col-reverse items-center gap-8
-        overflow-hidden rounded-xl pb-4 shadow-lg sm:my-16 lg:mx-auto lg:flex-row lg:gap-16 lg:even:flex-row-reverse'
+        overflow-hidden rounded-xl shadow-lg sm:my-16 lg:mx-auto lg:flex-row lg:gap-16 lg:even:flex-row-reverse'
     >
       <div className='w-full px-8'>
         <h3 className='leading-none tracking-widest text-purple'>{title}</h3>

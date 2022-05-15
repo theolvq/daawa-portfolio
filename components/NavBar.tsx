@@ -9,7 +9,7 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ scrollTarget, showNav, setShowNav }) => {
   const scrollClass = `${showNav ? 'translate-x-2' : 'translate-y-2'}  text-cyan font-bold`;
   const mobileNavClass =
-    'flex-col items-end gap-8 absolute right-0 top-16 bg-black px-8 pt-4 pb-8 w-full z-40';
+    'flex-col items-end gap-8 absolute right-0 top-16 bg-black px-8 pt-4 pb-8 w-full z-40 ';
 
   return (
     <header className='fixed top-0 left-0 z-30 h-16  w-full bg-black bg-opacity-80 text-white shadow-md shadow-slate-700 backdrop-blur-lg'>
