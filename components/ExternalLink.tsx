@@ -7,7 +7,12 @@ interface Props {
 
 const ExternalLink: FC<Props> = ({ href, children }) => {
   return (
-    <a href={href} target='_blank' rel='noreferrer'>
+    <a
+      className='text-blue-800 font-semibold border-b  border-b-blue-800 '
+      href={href}
+      target='_blank'
+      rel='noreferrer'
+    >
       {children}
     </a>
   );

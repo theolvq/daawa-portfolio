@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Project } from '../types';
+import { Project } from '../lib';
 import ExternalLink from './ExternalLink';
 
 interface Props {
@@ -7,21 +7,25 @@ interface Props {
 }
 
 const ProjectCard: FC<Props> = ({ project }) => {
-  const { title, category, techStack, url } = project;
+  const { title, techStack, url } = project;
+
+  const getLinkText = () => url.replace('https://', '');
+
   return (
-    <div>
-      <h3>{title}</h3>
-      <span>{category}</span>
-      <h4>Tech stack</h4>
-      <div>
+    <div className='shadow-sm rounded-md p-4 md:p-6 bg-white w-64 h-48'>
+      <h3 className='text-xl font-semibold mb-2'>{title}</h3>
+      <div className='mb-4'>
         {techStack.map((tech, index) => (
-          <React.Fragment key={`${tech}-${index}`}>
-            <span>{tech}</span>
-            {index < techStack.length && ' - '}
-          </React.Fragment>
+          <span
+            className='font-medium text-gray-800 text-sm'
+            key={`${tech}-${index}`}
+          >
+            {tech}
+            {index < techStack.length - 1 && ' - '}
+          </span>
         ))}
       </div>
-      <ExternalLink href={url}>Live Site</ExternalLink>
+      <ExternalLink href={url}>{getLinkText()}</ExternalLink>
     </div>
   );
 };

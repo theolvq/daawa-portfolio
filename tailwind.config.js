@@ -5,50 +5,34 @@ module.exports = {
   ],
   theme: {
     extend: {
-      zIndex: {
-        '-10': '-10',
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       },
-      colors: {
-        cyan: 'hsl(191, 99%, 68%)',
-        pink: 'hsl(330, 100%, 70%)',
-        purple: 'hsl(264, 84%, 51%)',
-        white: 'hsl(330, 60%, 98%)',
-        'white-trans': 'hsla(330, 60%, 98%, 0.5)',
-        black: 'hsl(240, 21%, 12%)',
+      backgroundSize: {
+        'size-2': '200vw 200vh',
+        'size-4': '400%',
       },
       keyframes: {
-        'gradient-hover': {
+        gradient: {
           '0%, 100%': {
-            backgroundImage:
-              'linear-gradient(-45deg hsl(264, 84%, 51%), hsl(191, 99%, 68%))',
+            'background-position': 'bottom ',
           },
           '25%': {
-            backgroundImage:
-              'linear-gradient(45deg hsl(264, 84%, 51%), hsl(191, 99%, 68%))',
+            'background-position': 'left',
           },
           '50%': {
-            backgroundImage:
-              'linear-gradient(135deg hsl(264, 84%, 51%), hsl(191, 99%, 68%))',
+            'background-position': 'top',
           },
           '75%': {
-            backgroundImage:
-              'linear-gradient(-135deg hsl(264, 84%, 51%), hsl(191, 99%, 68%))',
+            'background-position': 'right',
           },
         },
       },
+
       animation: {
-        'gradient-hover': 'gradient-hover 1s ease infinite',
+        gradient: 'gradient 15s infinite ease-in-out',
+        'pulse-slow': 'pulse 20s infinite ease-in-out',
       },
     },
-
-    fontFamily: {
-      sans: ['Open Sans', 'sans-serif'],
-    },
   },
-  variants: {
-    extend: {
-      flexDirection: ['even'],
-    },
-  },
-  plugins: [require('@tailwindcss/forms')],
 };
