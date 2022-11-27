@@ -10,12 +10,11 @@ module.exports = {
       },
       backgroundSize: {
         'size-2': '200vw 200vh',
-        'size-4': '400%',
       },
       keyframes: {
         gradient: {
           '0%, 100%': {
-            'background-position': 'bottom ',
+            'background-position': 'bottom',
           },
           '25%': {
             'background-position': 'left',
@@ -30,8 +29,10 @@ module.exports = {
       },
 
       animation: {
-        gradient: 'gradient 15s infinite ease-in-out',
-        'pulse-slow': 'pulse 20s infinite ease-in-out',
+        gradient: 'gradient 30s infinite ease-in-out',
+      },
+      gridTemplateRows: {
+        '2-push-bottom': '1fr min-content',
       },
     },
   },
